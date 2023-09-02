@@ -1,7 +1,9 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/image/cancel.png";
 import { colorSelected, deleted, toggled } from "../redux/todos/actions";
-
+const filtersByStatus = ()=> {
+  
+}
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
   const { id, text, completed, color } = todo;
@@ -40,7 +42,7 @@ const handleDelete = (todoId)=> {
         )}
       </div>
 
-      <div className="select-none flex-1 line-through">{todo.text}</div>
+      <div className={`select-none flex-1 ${completed && "line-through" } `}>{todo.text}</div>
 
       <div
       onClick={()=>handleColorChange(id, "green")}
