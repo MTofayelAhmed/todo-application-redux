@@ -1,9 +1,7 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/image/cancel.png";
 import { colorSelected, deleted, toggled } from "../redux/todos/actions";
-const filtersByStatus = ()=> {
-  
-}
+
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
   const { id, text, completed, color } = todo;
